@@ -1,0 +1,17 @@
+.friend {
+  border-bottom: 2px solid var(--bs-gray-300);
+
+  .actions{
+  	width: 30%;
+  }
+  .bi {
+  	display: flex;
+  	cursor: pointer;
+  	justify-content: center;
+  	align-items: center;
+  	width: 35px;
+  	height: 35px;
+  	font-size: 22px;
+  	border: 2px solid var(--bs-gray-500);
+  }
+}
