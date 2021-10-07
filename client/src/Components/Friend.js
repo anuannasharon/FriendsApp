@@ -1,10 +1,13 @@
+import './Friend.scss';
 
-function Friend() {
+function Friend({friend, deleteEvent, doFavourite}) {
 return(
-	<div>
-		<label>Anu</label>
-		<button>Favourite</button>
-		<i class="bi bi-trash"></i>
+	<div className="friend d-flex justify-content-between p-3">
+		<label>{friend.name} </label>
+		<div className="actions d-flex justify-content-between">
+		  <i className={`bi ${ friend.favourite ? 'bi-star-fill': 'bi-star' }`} onClick={ () => doFavourite(friend) }></i>
+		  <i className="bi bi-trash" onClick={ () => deleteEvent(friend.id) }></i>
+		</div>
 	</div>
 	)
 }
